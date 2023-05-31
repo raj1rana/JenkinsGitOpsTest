@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Build and Test') {
+            steps {
+               echo "buid for release"
+            }
+        }
+        
+        stage('Release') {
+            steps {
+                echo "release scripts"
+            }
+        }
+    }
+}
